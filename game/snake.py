@@ -1,7 +1,7 @@
 import pygame, sys, time, random 
 
 
-speed = 20
+speed = 15
 
 
 #windows
