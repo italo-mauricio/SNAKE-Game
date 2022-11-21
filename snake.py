@@ -1,14 +1,14 @@
 import pygame, sys, time, random 
 
 
-speed = 15
+speed = 20
 
 
 #windows
 
 
-frame_size_x = 720
-frame_size_y = 488
+frame_size_x = 1366
+frame_size_y = 720
 
 
 check_erros = pygame.init()
@@ -128,7 +128,7 @@ while True:
     for pos in snake_body:
         pygame.draw.rect(game_window, green, pygame.Rect(
             pos[0] + 2, pos[1] + 2,
-            square_size -2, square_size -2 ))
+            square_size -2, square_size -2))
         
     pygame.draw.rect(game_window,red, pygame.Rect(food_pos[0], 
                     food_pos[1], square_size, square_size))
