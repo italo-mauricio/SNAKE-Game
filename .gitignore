@@ -22,6 +22,9 @@
 *.a
 *.la
 *.lo
+*.Lib
+*.build/snake
+*.build
 
 # Shared objects (inc. Windows DLLs)
 *.dll
