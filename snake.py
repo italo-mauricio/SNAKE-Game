@@ -116,8 +116,10 @@ while True:
     # spawn food
 
     if not food_spawn:
-         food_pos = [random.randrange(1,(frame_size_x // square_size)) * square_size, 
+        food_pos = [random.randrange(1,(frame_size_x // square_size)) * square_size, 
                 random.randrange(1,(frame_size_y // square_size)) * square_size]
+
+        food_spawn = True
 
     # GFX
 
@@ -131,7 +133,7 @@ while True:
     pygame.draw.rect(game_window,red, pygame.Rect(food_pos[0], 
                     food_pos[1], square_size, square_size))
 
-                    
+
     # game over conditions
 
     for block in snake_body[1:]:
