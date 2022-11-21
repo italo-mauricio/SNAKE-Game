@@ -43,6 +43,55 @@ def init_vars():
     direction = "RIGHT"
     head_pos = [120,60]
     snake_body = [[120,60]] 
+    food_pos = [random.randrange(1,(frame_size_x // square_size)) * square_size, 
+                random.randrange(1,(frame_size_y // square_size)) * square_size]
+    food_spawn = True
+    score = 0
+
+init_vars()
+
+
+def show_score():
+    print("Showing score")
+
+
+#game loop
+
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        elif event.type == pygame.KEYDOWN:
+            if (event.key == pygame.K_UP or event.key == ord("w")
+                and direction != "DOWN"):
+                direction = "UP"
+            elif (event.key == pygame.K_DOWN or event.key == ord("s")
+                and direction != "UP"):
+                direction = "DOWN"
+            elif (event.key == pygame.K_LEFT or event.key == ord("a")
+                and direction != "RIGHT"):
+                direction = "LEFT"
+            elif (event.key == pygame.K_RIGHT or event.key == ord("d")
+                and direction != "LEFT"):
+                direction = "RIGHT"
+
+    if direction == "UP":
+        head_pos[1] -= square_size
+    elif direction == "DOWN":
+        head_pos[1] += square_size
+    elif direction == "LEFT":
+        direction -= square_size
+    elif direction == "RIGHT":
+        direction += square_size
+
+        
+
+
+
+
+
 
 
 
